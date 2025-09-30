@@ -15,3 +15,10 @@ jobs:
         steps:
             - name: Second Job of Multiple Job Workflow
               run: echo Second Job Workflow of Multiple Job
+
+    multiple_job_workflow_third_job:
+        needs: [multiple_job_workflow_first_job]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Second Job of Multiple Job Workflow
+              run: echo Second Job Workflow of Multiple Job
