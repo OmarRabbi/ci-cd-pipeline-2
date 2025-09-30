@@ -1,0 +1,10 @@
+name: Multiple Job Workflow
+
+on: workflow_dispatch
+
+jobs:
+    multiple_job_workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Multiple Job Workflow
+              run: echo Multiple Job Workflow
