@@ -1,0 +1,14 @@
+name: Cron Workflow
+
+on: 
+    schedule:
+        - cron: '*/2 * * * *'
+    
+    workflow_dispatch:
+
+jobs:
+    cron-workflow:
+        runs-on: ubuntu-latest
+        steps:
+             - name: Cron Workflow
+               run: echo cron workflow will run after every 2 minutes
