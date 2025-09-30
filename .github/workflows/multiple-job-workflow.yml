@@ -20,5 +20,12 @@ jobs:
         needs: [multiple_job_workflow_first_job]
         runs-on: ubuntu-latest
         steps:
-            - name: Second Job of Multiple Job Workflow
-              run: echo Second Job Workflow of Multiple Job
+            - name: Third Job of Multiple Job Workflow
+              run: echo Third Job Workflow of Multiple Job
+
+    multiple_job_workflow_fourth_job:
+        needs: [multiple_job_workflow_second_job, multiple_job_workflow_third_job]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Fourth Job of Multiple Job Workflow
+              run: echo Fourth Job Workflow of Multiple Job
