@@ -9,6 +9,6 @@ jobs:
             - name: Previous nodejs Version
               run: node -v
             - name: Predefined nodejs action
-              uses: actions/setup-node@v5
+              uses: actions/setup-node@v4
             - name: Latest nodejs Version
               run: node -v
