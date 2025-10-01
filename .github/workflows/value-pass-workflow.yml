@@ -1,0 +1,24 @@
+name: Value Pass Workflow
+
+on: 
+    workflow_dispatch:
+        inputs:
+            name:
+                description: 'Enter your name for greetings'
+                required: true
+                default: 'Unnamed'
+                
+
+jobs:
+    value-pass-workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Value Pass Workflow Created
+              run: echo value pass workflow is creating
+
+            - name: Get the Value from the User
+              id: greeting
+              run: echo "message= Hello ${{github.event.inputs.name}}. How are you?" >> $GITHUB_OUTPUT
+
+            - name: Print the Value
+              run: echo ${{steps.greeting.outputs.message}}
