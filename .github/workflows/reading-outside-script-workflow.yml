@@ -1,0 +1,15 @@
+name: Read Outside File of Github
+
+on: workflow_dispatch
+
+jobs:
+    reading_outside_file_of_github:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout all files
+              uses: actions/checkout@v4
+              
+            - name: Reading Python File from Root Folder
+              run: python script.py
+            
+
